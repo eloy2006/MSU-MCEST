@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSU-MCEST</title>
+    <link rel="stylesheet" href="styling.css">
+    
+</head>
+<body>
+    <header> 
+        <div class="headerS">
+        <img src="dept-logo-dcje.png" alt="MSU-MCEST Logo">
+        </div>
+        <div class="nav-links">
+        <a href ="http://msumcest.edu.ph/pages/Admission/Admissions.php">Admission</a>
+        <a href = "http://msumcest.edu.ph/pages/academics/academics.php">Academics</a>
+        <a href = "http://msumcest.edu.ph/pages/Faculty_Staff/faculty_staff.php">Faculty & Staff</a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="header">
+        
+            <h1>Welcome to MSU-MCEST</h1>
+        </div>
+        <div class="content">
+            <div class="content-text">
+                <h1>Your First Choice for Quality Education</h1>
+                <p>With its education programs consistently achieving a 100% passing rate in the Licensure 
+                    Examination for Teachers (LET) and even producing board topnotchers,<br> 𝐌𝐒𝐔-𝐌𝐂𝐄𝐒𝐓 
+                    continues to aim for excellence in instruction, research, and community service. 
+                    The campus envisions further expansion into the fields of science,<br> technology, and innovation, responding proactively to 
+                    the educational and developmental needs of its surrounding communities.</p>
+                <a href="http://msumcest.edu.ph/" class="btn">Learn More!</a>
+            </div>
+            <img src="about.jpg" class="content-img">
+        </div>
+        <div class="learning">
+            <img src="feature (1).jpg" class="learning-img">
+            <div class="learning-text">
+                <h1>Why You Should Start Learning with Us?</h1>
+                <p>MSU-MCEST is a premier public institution located in Maigo, Lanao del Norte, 
+                    Philippines. It specializes in industrial innovation and technical education, offering a range of programs designed to equip students with cutting-edge knowledge and
+                    practical skills. As a COPC-certified institution, it has been recognized for its commitment to quality education and operational excellence.</p>
+            </div>
+        </div>
+        
+        <section class="stats">
+        <div class="stat-box">
+        <h2 class="counter" data-target="20">0</h2>
+        <p>Available<br>Programs</p>
+        </div>
+
+        <div class="stat-box">
+        <h2 class="counter" data-target="64">0</h2>
+        <p>Empowered<br>Personnel</p>
+        </div>
+
+        <div class="stat-box">
+        <h2 class="counter" data-target="81">0</h2>
+        <p>Skilled<br>Faculty</p>
+        </div>
+
+        <div class="stat-box">
+        <h2 class="counter" data-target="2009">0</h2>
+        <p>Happy<br>Students</p>
+        </div>
+        </section>
+        <div class="courses">
+            <div class="course_header"><h1>Departments</h1></div>
+            <div class="course-row">
+                <div class="course" ><img src="dept-logo-dhess.png" alt="Educational Image logo">
+                <p>Department of Humanities, <br>Education, and Social Sciences</p>
+                <a href="http://msumcest.edu.ph/pages/academics/acad_dept_dhess.php" class="btn">Learn More!</a>
+            </div>
+            <div class="course"><img src="dept-logo-dcs.png" alt="Computer Science Image logo">
+                <p>Department of Computer Science</p>
+                <a href="http://msumcest.edu.ph/pages/academics/acad_dept_dcs.php" class="btn">Learn More!</a>
+            </div>
+            <div class="course"><img src="dept-logo-dhm.png" alt ="Hotel and Restaurant Management Image logo">
+                <p>Department of Hotel and <br>Restaurant Management</p>
+                <a href="http://msumcest.edu.ph/pages/academics/acad_dept_dhm.php" class="btn">Learn More!</a>
+            </div>
+            <div class="course">
+                <img src="dept-logo-dit.png" alt="DIT Logo">
+                <p>Department of <br>Industrial Technology</p>
+                <a href="http://msumcest.edu.ph/pages/academics/acad_dept_dit.php" class="btn">Learn More!</a>
+            </div>
+            <div class="course">
+                <img src="dept-logo-det.png" alt="DET Logo">
+                <p>Department of <br>Engineering Technology</p>
+                <a href="http://msumcest.edu.ph/pages/academics/acad_dept_det.php" class="btn">Learn More!</a>
+            </div>
+            <div class="course">
+                <img src="dept-logo-dnsm.png" alt="DNSM Logo">
+                <p>Department of Natural <br>Science and Mathemathics</p>
+                <a href="http://msumcest.edu.ph/pages/academics/acad_dept_dnsm.php" class="btn">Learn More!</a>
+            </div>
+            <div class="course">
+                <img src="dept-logo-dcje.png" alt="DCJE Logo">
+                <p>Department of Criminal<br> Justince Education</p>
+                <a href="http://msumcest.edu.ph/pages/academics/acad_dept_dcje.php" class="btn">Learn More!</a>
+            </div>
+            <div class="course">
+                <img src="dept-logo-dsw.png" alt="DSW Logo">
+                <p>Department of <br>Social Work</p>
+                <a href="http://msumcest.edu.ph/pages/academics/acad_dept_dsw.php" class="btn">Learn More!</a>
+            </div>
+        </div>
+    </div>
+
+<script>
+    const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+    const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+
+        const increment = target / 100;
+
+        if(count < target){
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCount, 20);
+        }else{
+            counter.innerText = target;
+        }
+    };
+
+    updateCount();
+});
+</script>
+    
+</body>
+</html>
